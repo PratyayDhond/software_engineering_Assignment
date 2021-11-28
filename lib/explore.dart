@@ -48,267 +48,466 @@ class _ExploreState extends State<Explore> {
       backgroundColor: Color(0xffCDE3F1),
       body: Container(
 
-        child: Stack(
+        child: Column(
           children: [
-            Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(
-                      top: height * 0.04, left: width * 0.05),
-                  child: SizedBox(
-                    height: height * 0.045,
-                    child: Row(
-                      children: [
-                        SizedBox(width: width * 0.02),
+            Padding(
+              padding: EdgeInsets.only(
+                  top: height * 0.04, left: width * 0.05),
+              child: SizedBox(
+                height: height * 0.045,
+                child: Row(
+                  children: [
+                    SizedBox(width: width * 0.02),
 
-                      ],
-                    ),
-                  ),
+                  ],
                 ),
-                Padding(
-                  padding: EdgeInsets.only(
-                      top: height * 0.007,
-                      left: width * 0.05,
-                      right: width * 0.05),
-                  child: SizedBox(
-                    height: height * 0.060,
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: Color(0xffffffff),
-                          borderRadius: BorderRadius.circular(25)),
-                      child: Row(
-                        children: [
-                          SizedBox(width: width * 0.025),
-                          InkWell(
-                            onTap: (){
-
-                            },
-                            child: Container(
-                                child: InkWell(
-                                  onTap: (){
-                                    Navigator.pop(context);
-                                  },
-                                  child: Icon(
-                                    Icons.arrow_back
-                                  ),
-                                )
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 10.0),
-                            child: Text('Search'),
-                          ),
-                          Expanded(child: Container()),
-                          Padding(
-                            padding: EdgeInsets.only(
-                                right: MediaQuery.of(context).size.width * 0.0025,
-                                top: MediaQuery.of(context).size.height * 0.005,
-                                bottom:
-                                MediaQuery.of(context).size.height * 0.005),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: width * 0.2,top:
-                  height*0.05,right:width*0.2),
-                  child: Container(
-                    color: Colors.white,
-
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left:
-                  width*0.05,right: width*0.05),
-                  child: Column(
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                  top: height * 0.007,
+                  left: width * 0.05,
+                  right: width * 0.05),
+              child: SizedBox(
+                height: height * 0.060,
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Color(0xffffffff),
+                      borderRadius: BorderRadius.circular(25)),
+                  child: Row(
                     children: [
-                      Row(
-                        children: [
-                          Container(
-                            height: height*0.698,
-                            width: width*0.9,
-                            color: Color(0xffffCDE3F1),
-                            child: Column(
-                              children: [
+                      SizedBox(width: width * 0.025),
+                      InkWell(
+                        onTap: (){
 
-                                Row(
-                                  children: [
-                                    Container(
-                                      child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius: BorderRadius.circular(height*0.02),
-                                            child: Image(image: AssetImage("asset/book1.png"),
-                                              height: height*0.21, width: width*0.3,),
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(top: height * 0.0075,left: width*0.02),
-                                            child: Text('One Indian Girl',),
-                                          ),Padding(
-                                            padding: EdgeInsets.only(left: width*0.02),
-                                            child:  Text('Chetan Bhagat',
-                                              style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Expanded(child: Container()),
-                                    Container(
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius: BorderRadius.circular(height*0.02),
-                                            child: Image(image: AssetImage("asset/book2.png"),
-                                              height: height*0.28, width: width*0.4,),
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(top: height*0.01,left: width*0.02),
-                                            child: Text('Wonder',),
-                                          ),Padding(
-                                            padding: EdgeInsets.only(left: width*0.02),
-                                            child:  Text('R.J.Palacio',style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),),
-                                          ),
-
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: height*0.01,),
-                                Row(
-                                  children: [
-                                    Container(
-                                      child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius: BorderRadius.circular(height*0.04),
-                                            child: Image(image: AssetImage("asset/book3.png"),
-                                              height: height*0.3, width: width*0.4,),
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(left: width*0.02),
-                                            child: Text('Scion Of Ikshvaku',),
-                                          ),Padding(
-                                            padding: EdgeInsets.only(left: width*0.02),
-                                            child:  Text('Amish',style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Expanded(child: Container()),
-                                    Container(
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius: BorderRadius.circular(height*0.02),
-                                            child: Image(image: AssetImage("asset/book4.png"),
-                                              height: height*0.28, width: width*0.4,),
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(top: height*0.01,left: width*0.02),
-                                            child: FittedBox(
-                                              child: Text('Things no one else cans',
-                                                overflow: TextOverflow.ellipsis,
-                                              ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(left: width*0.02),
-                                            child:  Text('R.J.Palacio',style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-
-
-
-
-
-                              ],
-                            ),
-                          )
-                        ],
+                        },
+                        child: Container(
+                            child: InkWell(
+                              onTap: (){
+                                Navigator.pop(context);
+                              },
+                              child: Icon(
+                                Icons.arrow_back
+                              ),
+                            )
+                        ),
                       ),
-
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0),
+                        child: Text('Search'),
+                      ),
+                      Expanded(child: Container()),
+                      Padding(
+                        padding: EdgeInsets.only(
+                            right: MediaQuery.of(context).size.width * 0.0025,
+                            top: MediaQuery.of(context).size.height * 0.005,
+                            bottom:
+                            MediaQuery.of(context).size.height * 0.005),
+                      ),
                     ],
                   ),
                 ),
-                Container(
-                  width: width,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(height*0.03,),
-                        topRight: Radius.circular(height*0.03,)
-                    ),
-                    border: Border.all(
-                        color:
-                        Color(0xff00369F)
-                    ),
-                    color: Colors.white,
-                  ),
-                  child: InkWell(
-                    onTap: (){
-
-                    },
-                    child: Column(
-
-                      children: [
-
-                        Padding(
-                          padding: EdgeInsets.only(top: height*0.02, right: width*0.8),
-                          child: Icon(Icons.menu),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(right: width*0.8),
-                          child: Text('Menu'),
-                        ),
-
-
-                      ],
-
-                    ),
-                  ),
-                  height: height*0.1,
-                )
-              ],
-            ),
-            Align(
-              alignment: Alignment(0.85,0.9),
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(height),
-                    color: Color(0xffA7DAF5),
-                    border: Border.all(
-                        color: Color(0xff00369F)
-                    )
-                ),
-
-                child: Container(
-                  child: Center(
-                    child: Image(
-                      image: AssetImage('asset/compass.png'),
-                      height: MediaQuery.of(context).size.height*0.06,
-                      width: MediaQuery.of(context).size.height*0.4,
-                    ),
-                  ),
-                ),
-                height: height*0.1,
-                width: height*0.1,
               ),
-            )
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: width * 0.2,top:
+              height*0.05,right:width*0.2),
+              child: Container(
+                color: Colors.white,
+
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left:
+              width*0.05,right: width*0.05),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        height: height*0.698,
+                        width: width*0.9,
+                        color: Color(0xffffCDE3F1),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(right:width*0.67),
+                              child: Text('Explore', style: TextStyle(fontWeight: FontWeight.bold,fontSize: 26)),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(right:width*0.76,top: height*0.01,bottom: height*0.01),
+                              child: Text('Thriller', style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18)),
+                            ),
+                            Container(
+                              child:
+                                SingleChildScrollView(
+                                  scrollDirection: Axis.horizontal,
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        child: InkWell(
+                                          onTap: (){
+                                            print("XD");
+                                          },
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            children: [
+                                              ClipRRect(
+                                                borderRadius: BorderRadius.circular(height*0.02),
+                                                child: Image(image: AssetImage("asset/e_book1.png"),
+                                                  height: height*0.21, width: width*0.3,),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(top: height * 0.0075,left: width*0.02),
+                                                child: Text('You',),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(left: width*0.02),
+                                                child:  Text('Caroline Kepnes',
+                                                  style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(left: width*0.02),
+                                                child:  Text('RS. 650',
+                                                  style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(width: width*0.04,),
+                                      Container(
+                                        child: InkWell(
+                                          onTap: (){
+                                            print("XD");
+                                          },
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            children: [
+                                              ClipRRect(
+                                                borderRadius: BorderRadius.circular(height*0.02),
+                                                child: Image(image: AssetImage("asset/e_book2.png"),
+                                                  height: height*0.21, width: width*0.3,),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(top: height * 0.0075,left: width*0.02),
+                                                child: Text('The Da Vince Code',),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(left: width*0.02),
+                                                child:  Text('Dan Brown',
+                                                  style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(left: width*0.02),
+                                                child:  Text('RS. 765',
+                                                  style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(width: width*0.04,),
+                                      Container(
+                                        child: InkWell(
+                                          onTap: (){
+                                            print("XD");
+                                          },
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            children: [
+                                              ClipRRect(
+                                                borderRadius: BorderRadius.circular(height*0.02),
+                                                child: Image(image: AssetImage("asset/e_book3.png"),
+                                                  height: height*0.21, width: width*0.3,),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(top: height * 0.0075,left: width*0.02),
+                                                child: Text('The Night',),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(left: width*0.02),
+                                                child:  Text('Nidhi Updhy',
+                                                  style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(left: width*0.02),
+                                                child:  Text('RS. 599',
+                                                  style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(width: width*0.04,),
+                                      Container(
+                                        child: InkWell(
+                                          onTap: (){
+                                            print("XD");
+                                          },
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            children: [
+                                              ClipRRect(
+                                                borderRadius: BorderRadius.circular(height*0.02),
+                                                child: Image(image: AssetImage("asset/e_book4.png"),
+                                                  height: height*0.21, width: width*0.3,),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(top: height * 0.0075,left: width*0.02),
+                                                child: Text('Percy Jackson',),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(left: width*0.02),
+                                                child:  Text('Rick Riordan',
+                                                  style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(left: width*0.02),
+                                                child:  Text('RS. 499',
+                                                  style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(width: width*0.04,),
+                                    ],
+
+                                  ),
+                                )
+
+                                // Expanded(child: Container()),
+                                // Container(
+                                //   child: Column(
+                                //     mainAxisAlignment: MainAxisAlignment.start,
+                                //     crossAxisAlignment: CrossAxisAlignment.start,
+                                //     children: [
+                                //       ClipRRect(
+                                //         borderRadius: BorderRadius.circular(height*0.02),
+                                //         child: Image(image: AssetImage("asset/book2.png"),
+                                //           height: height*0.28, width: width*0.4,),
+                                //       ),
+                                //       Padding(
+                                //         padding: EdgeInsets.only(top: height*0.01,left: width*0.02),
+                                //         child: Text('Wonder',),
+                                //       ),Padding(
+                                //         padding: EdgeInsets.only(left: width*0.02),
+                                //         child:  Text('R.J.Palacio',style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),),
+                                //       ),
+                                //
+                                //     ],
+                                //   ),
+                                // ),
+
+                            ),
+                            SizedBox(height: height*0.03,),
+                            Padding(
+                              padding: EdgeInsets.only(bottom: height*0.01,right:width*0.76),
+                              child: Text('Fictional', style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16)),
+                            ),
+                            Container(
+                                child:
+                                SingleChildScrollView(
+                                  scrollDirection: Axis.horizontal,
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        child: InkWell(
+                                          onTap: (){
+                                            print("XD");
+                                          },
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            children: [
+                                              ClipRRect(
+                                                borderRadius: BorderRadius.circular(height*0.02),
+                                                child: Image(image: AssetImage("asset/e_book5.png"),
+                                                  height: height*0.21, width: width*0.3,),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(top: height * 0.0075,left: width*0.02),
+                                                child: Text('All the lights we..',),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(left: width*0.02),
+                                                child:  Text('Anthony Doerr',
+                                                  style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(left: width*0.02),
+                                                child:  Text('RS. 899',
+                                                  style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(width: width*0.03,),
+                                      Container(
+                                        child: InkWell(
+                                          onTap: (){
+                                            print("XD");
+                                          },
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            children: [
+                                              ClipRRect(
+                                                borderRadius: BorderRadius.circular(height*0.02),
+                                                child: Image(image: AssetImage("asset/e_book6.png"),
+                                                  height: height*0.21, width: width*0.3,),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(top: height * 0.0075,left: width*0.02),
+                                                child: Text('Beloved',),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(left: width*0.02),
+                                                child:  Text('Toni Morrison',
+                                                  style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(left: width*0.02),
+                                                child:  Text('RS. 420',
+                                                  style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(width: width*0.03,),
+                                      Container(
+                                        child: InkWell(
+                                          onTap: (){
+                                            print("XD");
+                                          },
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            children: [
+                                              ClipRRect(
+                                                borderRadius: BorderRadius.circular(height*0.02),
+                                                child: Image(image: AssetImage("asset/e_book7.png"),
+                                                  height: height*0.21, width: width*0.3,),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(top: height * 0.0075,left: width*0.02),
+                                                child: Text('The Invisible man',),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(left: width*0.02),
+                                                child:  Text('Ralph Elison',
+                                                  style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(left: width*0.02),
+                                                child:  Text('RS. 320',
+                                                  style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(width: width*0.03,),
+                                      Container(
+                                        child: InkWell(
+                                          onTap: (){
+                                            print("XD");
+                                          },
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            children: [
+                                              ClipRRect(
+                                                borderRadius: BorderRadius.circular(height*0.02),
+                                                child: Image(image: AssetImage("asset/e_book8.png"),
+                                                  height: height*0.21, width: width*0.3,),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(top: height * 0.0075,left: width*0.02),
+                                                child: Text('The Host',),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(left: width*0.02),
+                                                child:  Text('Stephiene Meyer',
+                                                  style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(left: width*0.02),
+                                                child:  Text('RS. 699',
+                                                  style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(width: width*0.03,),
+                                    ],
+
+                                  ),
+                                )
+
+                              // Expanded(child: Container()),
+                              // Container(
+                              //   child: Column(
+                              //     mainAxisAlignment: MainAxisAlignment.start,
+                              //     crossAxisAlignment: CrossAxisAlignment.start,
+                              //     children: [
+                              //       ClipRRect(
+                              //         borderRadius: BorderRadius.circular(height*0.02),
+                              //         child: Image(image: AssetImage("asset/book2.png"),
+                              //           height: height*0.28, width: width*0.4,),
+                              //       ),
+                              //       Padding(
+                              //         padding: EdgeInsets.only(top: height*0.01,left: width*0.02),
+                              //         child: Text('Wonder',),
+                              //       ),Padding(
+                              //         padding: EdgeInsets.only(left: width*0.02),
+                              //         child:  Text('R.J.Palacio',style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),),
+                              //       ),
+                              //
+                              //     ],
+                              //   ),
+                              // ),
+
+                            ),
+
+
+
+
+
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+
+                ],
+              ),
+            ),
+
           ],
         ),
 

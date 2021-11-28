@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:software_engineering/search.dart';
 
 import 'explore.dart';
 
@@ -72,20 +73,20 @@ class _MyHomePageState extends State<MyHomePage> {
                       top: height * 0.007,
                       left: width * 0.05,
                       right: width * 0.05),
-                  child: SizedBox(
-                    height: height * 0.060,
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: Color(0xffffffff),
-                          borderRadius: BorderRadius.circular(25)),
-                      child: Row(
-                        children: [
-                          SizedBox(width: width * 0.025),
-                          InkWell(
-                            onTap: (){
-
-                            },
-                            child: Container(
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> Search(title: 'XD')));
+                    },
+                    child: SizedBox(
+                      height: height * 0.060,
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Color(0xffffffff),
+                            borderRadius: BorderRadius.circular(25)),
+                        child: Row(
+                          children: [
+                            SizedBox(width: width * 0.025),
+                            Container(
                               child:  CircleAvatar(
                                   radius: height*0.025,
                                   backgroundColor: Colors.transparent,
@@ -94,20 +95,20 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ),
                                 )
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 10.0),
-                            child: Text('Search'),
-                          ),
-                          Expanded(child: Container()),
-                          Padding(
-                            padding: EdgeInsets.only(
-                                right: MediaQuery.of(context).size.width * 0.0025,
-                                top: MediaQuery.of(context).size.height * 0.005,
-                                bottom:
-                                MediaQuery.of(context).size.height * 0.005),
-                          ),
-                        ],
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10.0),
+                              child: Text('Search'),
+                            ),
+                            Expanded(child: Container()),
+                            Padding(
+                              padding: EdgeInsets.only(
+                                  right: MediaQuery.of(context).size.width * 0.0025,
+                                  top: MediaQuery.of(context).size.height * 0.005,
+                                  bottom:
+                                  MediaQuery.of(context).size.height * 0.005),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -157,7 +158,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                         ],
                                       ),
                                     ),
-                                    Expanded(child: Container()),
+                                    // Expanded(child: Container()),
+                                    SizedBox(width: width*0.05,),
                                     Container(
                                       child: Column(
                                         mainAxisAlignment: MainAxisAlignment.start,
@@ -204,7 +206,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         ],
                                       ),
                                     ),
-                                    Expanded(child: Container()),
+                                    SizedBox(width: width*0.05,),
                                     Container(
                                       child: Column(
                                         mainAxisAlignment: MainAxisAlignment.start,
@@ -286,8 +288,9 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
             Align(
-              alignment: Alignment(0.85,0.9),
+              alignment: Alignment(0.75,0.88),
               child: Container(
+
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(height),
                     color: Color(0xffA7DAF5),
@@ -304,14 +307,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Center(
                       child: Image(
                         image: AssetImage('asset/compass.png'),
-                        height: MediaQuery.of(context).size.height*0.06,
-                        width: MediaQuery.of(context).size.height*0.4,
+                        height: MediaQuery.of(context).size.height*0.050,
+                        width: MediaQuery.of(context).size.height*0.35,
                       ),
                     ),
                   ),
                 ),
-                height: height*0.1,
-                width: height*0.1,
+                height: height*0.08,
+                width: height*0.08,
               ),
             )
           ],
