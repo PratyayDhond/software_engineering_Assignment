@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:software_engineering/search.dart';
-
+import 'books/book1.dart' as Book1;
+import 'books/book2.dart' as Book2;
+import 'books/book3.dart' as Book3;
+import 'books/book4.dart' as Book4;
 import 'explore.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -136,103 +139,127 @@ class _MyHomePageState extends State<MyHomePage> {
                               children: [
                                 Row(
                                   children: [
-                                    Container(
-                                      child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius: BorderRadius.circular(height*0.02),
-                                            child: Image(image: AssetImage("asset/book1.png"),
-                                              height: height*0.28, width: width*0.4,),
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(top: height * 0.01,left: width*0.02),
-                                            child: Text('One Indian Girl',),
-                                          ),Padding(
-                                            padding: EdgeInsets.only(left: width*0.02),
-                                            child:  Text('Chetan Bhagat',
-                                              style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
+                                    InkWell(
+                                      onTap: (){
+                                        Navigator.push(context, MaterialPageRoute(
+                                        builder: (context) => Book1.SearchPage(),
+                                        ));
+                  },
+                                      child: Container(
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          children: [
+                                            ClipRRect(
+                                              borderRadius: BorderRadius.circular(height*0.02),
+                                              child: Image(image: AssetImage("asset/book1.png"),
+                                                height: height*0.28, width: width*0.4,),
                                             ),
-                                          ),
-                                        ],
+                                            Padding(
+                                              padding: EdgeInsets.only(top: height * 0.01,left: width*0.02),
+                                              child: Text('One Indian Girl',),
+                                            ),Padding(
+                                              padding: EdgeInsets.only(left: width*0.02),
+                                              child:  Text('Chetan Bhagat',
+                                                style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                     // Expanded(child: Container()),
                                     SizedBox(width: width*0.05,),
-                                    Container(
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius: BorderRadius.circular(height*0.02),
-                                            child: Image(image: AssetImage("asset/book2.png"),
-                                              height: height*0.28, width: width*0.4,),
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(top: height*0.01,left: width*0.02),
-                                            child: Text('Wonder',),
-                                          ),Padding(
-                                            padding: EdgeInsets.only(left: width*0.02),
-                                            child:  Text('R.J.Palacio',style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),),
-                                          ),
+                                    InkWell(
+                                      onTap: (){
+                                        Navigator.push(context, MaterialPageRoute(
+                                          builder: (context) => Book2.SearchPage(),
+                                        ));
+                                      },
+                                      child: Container(
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            ClipRRect(
+                                              borderRadius: BorderRadius.circular(height*0.02),
+                                              child: Image(image: AssetImage("asset/book2.png"),
+                                                height: height*0.28, width: width*0.4,),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(top: height*0.01,left: width*0.02),
+                                              child: Text('Wonder',),
+                                            ),Padding(
+                                              padding: EdgeInsets.only(left: width*0.02),
+                                              child:  Text('R.J.Palacio',style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),),
+                                            ),
 
-                                        ],
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ],
                                 ),
                                 SizedBox(height: height*0.01,),
-                                Row(
-                                  children: [
-                                    Container(
-                                      child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius: BorderRadius.circular(height*0.04),
-                                            child: Image(image: AssetImage("asset/book3.png"),
-                                              height: height*0.3, width: width*0.4,),
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(left: width*0.02),
-                                            child: Text('Scion Of Ikshvaku',),
-                                          ),Padding(
-                                            padding: EdgeInsets.only(left: width*0.02),
-                                            child:  Text('Amish',style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    SizedBox(width: width*0.05,),
-                                    Container(
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius: BorderRadius.circular(height*0.02),
-                                            child: Image(image: AssetImage("asset/book4.png"),
-                                              height: height*0.28, width: width*0.4,),
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(top: height*0.01,left: width*0.02),
-                                            child: FittedBox(
-                                              child: Text('Things no one else cans',
-                                                overflow: TextOverflow.ellipsis,
-                                              ),
+                                InkWell(
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => Book3.SearchPage()));
+                                  },
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          children: [
+                                            ClipRRect(
+                                              borderRadius: BorderRadius.circular(height*0.04),
+                                              child: Image(image: AssetImage("asset/book3.png"),
+                                                height: height*0.3, width: width*0.4,),
                                             ),
-                                          ),
-                                          Padding(
-                                            padding: EdgeInsets.only(left: width*0.02),
-                                            child:  Text('R.J.Palacio',style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),),
-                                          ),
-                                        ],
+                                            Padding(
+                                              padding: EdgeInsets.only(left: width*0.02),
+                                              child: Text('Scion Of Ikshvaku',),
+                                            ),Padding(
+                                              padding: EdgeInsets.only(left: width*0.02),
+                                              child:  Text('Amish',style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),),
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                      SizedBox(width: width*0.05,),
+                                      InkWell(
+                                        onTap: (){
+                                          Navigator.push(context, MaterialPageRoute(builder: (context) => Book4.SearchPage()));
+                                        },
+                                        child: Container(
+                                          child: Column(
+                                            mainAxisAlignment: MainAxisAlignment.start,
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              ClipRRect(
+                                                borderRadius: BorderRadius.circular(height*0.02),
+                                                child: Image(image: AssetImage("asset/book4.png"),
+                                                  height: height*0.28, width: width*0.4,),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(top: height*0.01,left: width*0.02),
+                                                child: FittedBox(
+                                                  child: Text('Things no one else cans',
+                                                    overflow: TextOverflow.ellipsis,
+                                                  ),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsets.only(left: width*0.02),
+                                                child:  Text('R.J.Palacio',style: TextStyle(color: Color(0xff9A9A9A,), fontSize: 11),),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
 
 
