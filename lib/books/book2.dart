@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:software_engineering/card.dart' as Pay;
+import 'package:software_engineering/paymentMode.dart';
 void main() {
   runApp(MyApp());
 }
@@ -331,7 +332,7 @@ var star5 = false;
                                                   backgroundColor: Colors.white,
                                                 ),
                                                 onPressed: () {
-                                                  Navigator.push(context, MaterialPageRoute(builder: (context) => Pay.Card()));
+                                                  Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentMode()));
                                                 },
                                                 child: Text('Buy Now'),
                                               )

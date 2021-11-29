@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:software_engineering/paymentMode.dart';
 import '../card.dart' as Pay;
 void main() {
   runApp(MyApp());
@@ -331,7 +332,7 @@ class _SearchPageState extends State<SearchPage> {
                                                   backgroundColor: Colors.white,
                                                 ),
                                                 onPressed: () {
-                                                  Navigator.push(context, MaterialPageRoute(builder: (context) => Pay.Card()));
+                                                  Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentMode()));
                                                 },
                                                 child: Text('Buy Now'),
                                               )
