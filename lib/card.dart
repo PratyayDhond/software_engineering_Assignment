@@ -109,11 +109,13 @@ class _CardState extends State<Card> {
                                   obscureText: false)),
                           Expanded(
                               child: TextField(
-                                decoration: new InputDecoration(labelText: 'CVV'),
+                                decoration: new InputDecoration(
+                                    labelText: 'CVV'),
                                 keyboardType: TextInputType.number,
                                 maxLength: 3,
                                 obscureText: true,
-                              ))
+                              )
+                          )
                         ],
                       ),
                       Column(
@@ -141,6 +143,22 @@ class _CardState extends State<Card> {
                   // ),
                 ),
 
+              ),
+            ),
+            SizedBox(height: height*0.3,),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: width*0.1),
+              child: InkWell(
+                onTap: (){},
+                child: Container(
+                  height: height*0.08,
+                  width: width*0.8,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0),
+                    color: Color(0xff002161),
+                  ),
+                  child: Center(child: Text('Pay Now',style: TextStyle(color: Colors.white),)),
+                ),
               ),
             )
           ],
@@ -228,7 +246,7 @@ class _CreditCardState extends State<CreditCard> {
                           children: [
                             new TextField(
                               decoration: new InputDecoration(
-                                  labelText: 'Card Holders Name'),
+                                  labelText: 'Card Holder\'s Name'),
                             )
                           ],
                         )
